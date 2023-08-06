@@ -50,8 +50,8 @@ function startServer () {
 
           req.on('end', () => {
             const data = JSON.parse(body)
-              res.writeHead(201, { 'Content-Type': 'application/json; charset=utf-8' })
-              return res.end(JSON.stringify(data))
+            res.writeHead(201, { 'Content-Type': 'application/json; charset=utf-8' })
+            return res.end(JSON.stringify(data))
           })
         } else {
           return error405(res)
